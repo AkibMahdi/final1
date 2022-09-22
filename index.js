@@ -4,25 +4,20 @@ const userListEl = document.querySelector(".user-list");
 
 async function main() {
     const users = await fetch("https://jsonplaceholder.typicode.com/users");
-    const userData = await users.json();
-    const userListEl = document.querySelector("user-list");
-
-    userListEl.innerHTML = userData.map(
-    (user) => userHTML(user)).join("")
-        
-}    
+    const usersData = await users.json();
+    userListEl.innerHTML = usersData.map((user) => userHTML(user)).join("");
+}
 
 main ();
 
 function showUserPosts(id){
     localStorage.setItem("id", id)
-    //routing new page to java script//
-    window.location.href = `${window.location.origina}/user.html`
+    //routing to a new page in java script//
+    window.location.href = `${window.location.original}/user.html`
     
 }
 
 function userHTML(user) {
-
     return `<div class="user-card" onclick="showUserPosts(${user.id})">
             <div class="user-card__container">
             <h3>${user.name}</h4>
