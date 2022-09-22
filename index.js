@@ -11,10 +11,10 @@ async function main() {
 main ();
 
 function showUserPosts(id){
-    localStorage.setItem("id", id)
+    localStorage.setItem("id100", id)
     //routing to a new page in java script//
-    window.location.href = `${window.location.original}/user.html`
-    
+    window.location.href = `${window.location.origin}/git_test/final1/user.html`
+    //window.location.href = `http://127.0.0.1:5500/git_test/final1/user.html`
 }
 
 function userHTML(user) {

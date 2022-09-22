@@ -1,6 +1,6 @@
  //can make changes to stored data without it being cancelled//
 const postListEl = document.querySelector('.post-list'); //fix queryselector
-const id = localStorage.getItem ("id") //fix the getitem//
+const id = localStorage.getItem ("id100") //fix the getitem//
 async function onSearchChange(event) {
     const id = event.target.value
     renderPosts(id)
